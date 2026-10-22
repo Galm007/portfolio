@@ -1,5 +1,7 @@
 // Content sourced from Resources/Jmar_Pineda_Resume.tex. Edit here to update the site.
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export const site = {
   name: 'Jmar L. Pineda',
   fullName: 'Jmar Laxamana Pineda', // used in the hero heading only
@@ -11,8 +13,8 @@ export const site = {
   location: 'New York, NY',
   email: 'jmarlpineda21@gmail.com',
   phone: '+1 (347) 445-2415',
-  photo: '/profile.png',
-  resume: '/resume.pdf',
+  photo: base + '/profile.png',
+  resume: base + '/resume.pdf',
   links: {
     github: 'https://github.com/Galm007',
     linkedin: 'https://www.linkedin.com/in/jmar-pineda',
@@ -152,7 +154,7 @@ export const projects = [
     metrics: ['Multi-threaded', 'Genetic algorithm'],
     tags: ['C'],
     links: [{ label: 'View on GitHub', href: 'https://github.com/Galm007/triangle_slapper' }],
-    images: [{ src: '/projects/triangle-slapper.jpg', alt: 'Triangle Slapper output: an anime illustration recreated from layered, colored triangles' }],
+    images: [{ src: base + '/projects/triangle-slapper.jpg', alt: 'Triangle Slapper output: an anime illustration recreated from layered, colored triangles' }],
   },
   {
     title: 'Flappy Bird Neural Network',
@@ -161,7 +163,7 @@ export const projects = [
     metrics: ['Neuroevolution', 'Raylib'],
     tags: ['C'],
     links: [{ label: 'View on GitHub', href: 'https://github.com/Galm007/flappy_bird_AI' }],
-    images: [{ src: '/projects/flappy-bird.jpg', alt: 'Flappy Bird clone where a neural network controls the birds between pipes' }],
+    images: [{ src: base + '/projects/flappy-bird.jpg', alt: 'Flappy Bird clone where a neural network controls the birds between pipes' }],
   },
   {
     title: 'Forex Data Preprocessor',
@@ -183,8 +185,8 @@ export const projects = [
       { label: 'MonoGame (C#)', href: 'https://github.com/Galm007/MetaBalls' },
     ],
     images: [
-      { src: '/projects/metaballs-macroquad.jpg', alt: 'Metaballs rendered with marching squares in Rust, with the underlying circles drawn in red' },
-      { src: '/projects/metaballs-monogame.jpg', alt: 'Metaballs rendered with marching squares in MonoGame' },
+      { src: base + '/projects/metaballs-macroquad.jpg', alt: 'Metaballs rendered with marching squares in Rust, with the underlying circles drawn in red' },
+      { src: base + '/projects/metaballs-monogame.jpg', alt: 'Metaballs rendered with marching squares in MonoGame' },
     ],
   },
   {
