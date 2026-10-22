@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://galm007.github.io',
-  base: '/portfolio-website',
+  base: '/portfolio',
   vite: {
     plugins: [tailwindcss()],
   },
