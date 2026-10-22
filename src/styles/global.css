@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-paper: #f8fafc;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+
+  --color-accent-50: #eff6ff;
+  --color-accent-100: #dbeafe;
+  --color-accent-200: #bfdbfe;
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
+  --color-accent-700: #1d4ed8;
+  --color-accent-900: #1e3a8a;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  ::selection { background: var(--color-accent-200); }
+  :focus-visible { outline: 2px solid var(--color-accent-600); outline-offset: 3px; }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-700;
+  }
+  .section-title {
+    @apply font-display text-balance text-3xl font-semibold tracking-tight sm:text-4xl;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition;
+  }
+  .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition bg-accent-700 text-white shadow-sm hover:bg-accent-900; }
+  .btn-ghost { @apply inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition border border-line bg-white text-ink hover:border-accent-400 hover:text-accent-700; }
+  .chip {
+    @apply border border-accent-100 bg-accent-50 px-2 py-0.5 font-mono text-xs text-accent-900;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

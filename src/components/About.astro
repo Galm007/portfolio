@@ -1,0 +1,25 @@
+---
+import { about, education } from '../data/site';
+---
+<section id="about" class="mx-auto max-w-6xl px-5 py-20">
+  <div class="grid gap-12 lg:grid-cols-5">
+    <div class="lg:col-span-3">
+      <h2 class="section-title">About</h2>
+      <div class="mt-6 space-y-4 leading-relaxed text-muted">
+        {about.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+    <div class="lg:col-span-2">
+      <h3 class="font-mono text-xs uppercase tracking-wider text-muted">Education</h3>
+      <ul class="mt-4 space-y-3">
+        {education.map((e) => (
+          <li class=" border border-line bg-white p-4">
+            <p class="font-medium">{e.title}</p>
+            <p class="text-sm text-muted">{e.place}</p>
+            <p class="mt-1 font-mono text-xs text-accent-700">{e.detail}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

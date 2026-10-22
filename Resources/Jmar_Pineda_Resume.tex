@@ -1,0 +1,147 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.6in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[defaultsans]{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[colorlinks=true,urlcolor=accent,linkcolor=accent]{hyperref}
+
+\definecolor{navy}{HTML}{22223B}
+\definecolor{accent}{HTML}{0B4DB3}
+\definecolor{muted}{HTML}{555555}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.05}
+
+\titleformat{\section}{\color{navy}\large\bfseries}{}{0em}{\MakeUppercase}[\color{navy}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt}
+
+% \entry{Title}{Organization}{Dates}{Location}
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill {\color{muted}#3}\\
+  {\color{accent}\textbf{#2}}\hfill {\color{muted}\small #4}\par}
+% \project{Title}{Links}
+\newcommand{\project}[2]{%
+  \textbf{#1} \hfill {\small #2}\par}
+
+\begin{document}
+
+% ---------- Header ----------
+{\color{navy}
+{\Huge\bfseries Jmar L. Pineda}\\[3pt]
+{\large Electrical and Computer Engineer}}\\[4pt]
+{\small
++1 (347) 445-2415 \,|\, \href{mailto:jmarlpineda21@gmail.com}{jmarlpineda21@gmail.com} \,|\,
+New York, NY \,|\, \href{https://github.com/Galm007}{github.com/Galm007}}
+
+% ---------- Profile ----------
+\section{Profile}
+Sophomore studying Electrical and Computer Engineering at NYIT with experience in hardware and software
+development, alongside undergraduate research. Project leader for the NYIT IEEE Micromouse team and
+programming instructor with a record of leading teams, mentoring students, and shipping low-level
+projects in C, C++, Rust, and Python.
+
+% ---------- Education ----------
+\section{Education}
+\entry{New York Institute of Technology}{Electrical and Computer Engineering}{Sep 2025 -- Dec 2029 (expected)}{New York, NY}
+\begin{itemize}
+  \item Cumulative GPA: 3.7
+\end{itemize}
+\vspace{3pt}
+\entry{Queens High School for the Sciences}{High School Diploma}{Sep 2021 -- Jun 2025}{Jamaica, NY}
+\begin{itemize}
+  \item Cumulative GPA: 95.0
+\end{itemize}
+
+% ---------- Experience ----------
+\section{Experience \& Leadership}
+\entry{Open-Source Contributor}{Penrose \& math.js}{2024 -- 2026}{Remote}
+\begin{itemize}
+  \item \textbf{Penrose} (TypeScript, \href{https://github.com/penrose/penrose/pulls?q=is\%3Apr+author\%3AGalm007+is\%3Amerged}{4 merged PRs}): eliminated editor memory leaks from detached SVG elements, mouse event listeners, and render state pileup during resample/compile (e.g.\ ${\sim}46{,}000$ leaked listeners per compile down to 0), and wrote a benchmark script to profile leaks (\href{https://github.com/penrose/penrose/pull/1961}{\#1961}).
+  \item \textbf{Penrose:} reused a single MathJax pipeline across compiles, cutting leaked heap by ${\sim}85\%$ and leaked DOM nodes by ${\sim}80\%$ (\href{https://github.com/penrose/penrose/pull/1976}{\#1976}); fixed an editor race condition on rapid recompiles (\href{https://github.com/penrose/penrose/pull/1972}{\#1972}).
+  \item \textbf{math.js} (JavaScript): sped up the matrix \texttt{map()} and \texttt{forEach()} functions by over 300\%, benefiting many of the library's other algorithms (\href{https://github.com/josdejong/mathjs/pull/3251}{\#3251}).
+\end{itemize}
+\vspace{3pt}
+\entry{IEEE Micromouse Project Leader}{NYIT IEEE}{Nov 2025 -- Present}{New York, NY}
+\begin{itemize}
+  \item Lead and delegate tasks for a team of 5 to source materials, build the micromouse prototype and its software, create physical test cases, and iterate through rapid prototyping.
+  \item Team is far ahead in progress compared to all other NYIT teams, driven by clear task ownership and collaboration.
+\end{itemize}
+\vspace{3pt}
+\entry{Treasurer}{NYIT IEEE}{Apr 2026 -- Present}{New York, NY}
+\begin{itemize}
+  \item Manage the chapter's finances, budgeting, and forecasting.
+\end{itemize}
+\vspace{3pt}
+\entry{Code Coach}{theCoderSchool}{Jan 2026 -- Present}{Syosset, NY}
+\begin{itemize}
+  \item Teach students aged 9--16 to make their first computer games, building a solid foundation in programming.
+  \item Track the progress of 20+ students and design individualized lessons in Unity, Godot, Scratch, Roblox Studio, Arduino, Python, web development, VEX Robotics, Blender, and 3D printing.
+\end{itemize}
+\vspace{3pt}
+\entry{Campus Events Coordinator}{NYIT Campus Activities Board}{Nov 2025 -- Present}{New York, NY}
+\begin{itemize}
+  \item Planned, hosted, and budgeted multiple campus-wide events in collaboration with faculty, clubs, and vendors.
+\end{itemize}
+\vspace{3pt}
+\entry{Guest Coordinator \& Volunteer}{Members Church of God International}{Mar 2017 -- Present}{New York, NY}
+\begin{itemize}
+  \item Coordinate with other guest coordinators to run events on schedule, welcome guests, maintain order, and serve food (Apr 2025 -- Present).
+  \item Volunteer at community service events including blood drives, food drives, clean-ups, fundraisers, and free grocery stores.
+\end{itemize}
+\vspace{3pt}
+\entry{Peer Programming Tutor \& Hackathon Leader}{QHSS Hack Club}{Sep 2021 -- Jun 2025}{Jamaica, NY}
+\begin{itemize}
+  \item Taught classmates to make games and websites, set appropriate challenges, and helped them through problems.
+  \item Led my team to 1st place in the school-hosted Hackathon by delegating tasks and tackling the hardest problems.
+\end{itemize}
+\vspace{3pt}
+\entry{Embedded Systems Programmer}{QHSS Robotics Club}{2021 -- 2025}{Jamaica, NY}
+\begin{itemize}
+  \item Worked with builders and designers to define robot movements and goals, and optimized the robot for inter-school competitions.
+\end{itemize}
+
+% ---------- Projects ----------
+\section{Projects}
+\project{Triangle Slapper (C)}{\href{https://github.com/Galm007/triangle_slapper}{github.com/Galm007/triangle\_slapper}}
+\begin{itemize}
+  \item Multi-threaded genetic algorithm that recreates an image from layered triangles: it spawns random triangles, scores and selects the best, and breeds the next generation.
+\end{itemize}
+\vspace{3pt}
+\project{Flappy Bird Neural Network (C)}{\href{https://github.com/Galm007/flappy_bird_AI}{github.com/Galm007/flappy\_bird\_AI}}
+\begin{itemize}
+  \item Neural network that learns to play Flappy Bird through a genetic algorithm, built on my Raylib game.
+\end{itemize}
+\vspace{3pt}
+\project{Forex Data Preprocessor (Python)}{\href{https://github.com/Galm007/forex-data-preprocesor}{github.com/Galm007/forex-data-preprocesor}}
+\begin{itemize}
+  \item Computes common forex indicators from historical price and volume data, normalizes them, and packs them into a format ready for AI model training.
+\end{itemize}
+\vspace{3pt}
+\project{Metaballs Visualization (Rust, C\#)}{\href{https://github.com/Galm007/metaballs_macroquad}{macroquad} | \href{https://github.com/Galm007/MetaBalls}{MonoGame}}
+\begin{itemize}
+  \item Marching-squares metaballs implemented with macroquad (Rust) and MonoGame (C\#), based on Jamie Wong's article.
+\end{itemize}
+\vspace{3pt}
+\project{Automated Forex Trading Algorithms (MQL4)}{\href{https://github.com/Galm007/MT4-Expert-Advisors}{github.com/Galm007/MT4-Expert-Advisors}}
+\begin{itemize}
+  \item Series of trading algorithms for MetaTrader 4, with the most recent being the best performing.
+\end{itemize}
+
+% ---------- Skills ----------
+\section{Skills}
+\begin{itemize}[leftmargin=0pt,label={},itemsep=2pt]
+  \item \textbf{Languages \& Tools:} C, C++, C\#, Java, Python, Lua, JavaScript, Rust, HTML, CSS, SQL, Arduino, React, MQL4, Git, Docker, Linux, Shell, Excel
+  \item \textbf{Areas:} Embedded systems, robotics, game development (Unity, Godot, Roblox), AI implementations, trading algorithm development, web development
+  \item \textbf{Soft skills:} Communication, leadership, teamwork, project management
+  \item \textbf{Languages spoken:} Native English and Filipino; limited working proficiency in Spanish
+\end{itemize}
+
+\end{document}
